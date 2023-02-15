@@ -1,0 +1,190 @@
+* {
+  text-align: center;
+}
+
+.business-card{
+  display: flex;
+  flex-direction: column;
+  /* background: linear-gradient(139deg, #584b4f 50%, #343233 50.5%); */
+  box-shadow: 0 7px 10px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  width: 550px;
+  min-height: 300px;
+  max-width: 100%;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.business-card .profile {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  background-color: #DC143C;
+  color: white;
+  justify-content: center;
+}
+
+.business-card .profile .images {
+  position: relative;
+  height: 135px;
+  justify-content: center;
+}
+
+.business-card .profile .profile-image {
+  background-position: center;
+  background-size: cover;
+  width: 120px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.business-card .profile .profile-title {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.business-card .profile .profile-title h2 {
+  font-size: 1.4em;
+}
+
+.business-card .info {
+}
+
+.business-card .info .info-contact{
+  list-style: none;
+  justify-content: center;
+}
+
+.business-card .info .info-contact ul{
+  list-style: none;
+  padding: 15px;
+}
+  
+.business-card .info .info-bio {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  text-align: center;
+}
+
+.flip-card-3D-wrapper {
+  width: 100%;
+  height: 80%;
+  max-width: 500px;
+  max-height: 500px;
+  position: relative;
+  -o-perspective: 900px;
+  -webkit-perspective: 900px;
+  -ms-perspective: 900px;
+  perspective: 900px;
+  margin: 0 auto;
+}
+#flip-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.do-flip {
+  -o-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
+  display: block;
+  padding: 0.5em 1em;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 40px;
+  background-color: #DCDCDC;
+}
+#flip-card-btn-turn-to-back{
+text-align: center;
+margin: auto;
+  width: 200px;
+} 
+#flip-card-btn-turn-to-front{
+width: 110px;
+margin-top: 34px;
+margin-left: 37px;
+}
+#flip-card .flip-card-front, #flip-card .flip-card-back{
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+  box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+
+#flip-card .flip-card-back {
+  background-color: #DC143C;
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+  color: white;
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+.informatie{
+  padding: 30px;
+}
+
+/* ANIMATION */
+.one{
+  animation: ani1 30s infinite;
+}
+
+.two{
+  animation: ani2 30s infinite;
+}
+
+@keyframes ani1{
+  0%{
+      opacity: 0;
+  }
+  10%{
+
+      opacity: 1;
+  }
+  20%{
+      opacity: 0;
+  }
+}
+
+@keyframes ani2{
+  20%{
+      opacity: 0;
+  }
+  30%{
+
+      opacity: 1;
+  }
+  40%{
+      opacity: 0;
+  }
+}
