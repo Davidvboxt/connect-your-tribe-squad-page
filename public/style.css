@@ -1,24 +1,28 @@
 .avatar{
-  height: 50px;
-  width: 50px;
+  height: 200px;
+  width: 200px;
 }
 
 .overzichtspagina{
-  background-image: url('https://maken.wikiwijs.nl/bestanden/524465/vraag3.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 1075px;
-  height: 925px;
-  margin: auto;
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4rem;
+  justify-content: space-evenly;
+  align-content: space-around;
 }
 
-.context{
-  
+article{
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  padding: 100px;
+  color: slate;
+  text-align: center;
 }
 
 .context > h2{
-  font-size: small;
+  font-size: medium;
 }
 
 .titel{
