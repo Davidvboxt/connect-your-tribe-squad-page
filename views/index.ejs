@@ -1,22 +1,36 @@
 <%- include('./partials/head') %>
 
-<main>
-  <h1><%= squad.name %></h1>
+  <main>
 
-  <a href="/?squad=<%= squad.slug %>"><%= squad.name %></a>
-  <section>
-    <!-- Hier komen de members -->
-    <% squad.members.forEach(member => { %>
-    <article>
-      <% if (member.avatar) { %>
-      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-      <% }else{ %>
-      <img src="/placeholder.jpg" alt="Placeholder avatar" />
-      <% } %>
-      <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-    </article>
-    <% }) %>
-  </section>
-</main>
+    <h1>
+      <%= squad.name %>
+    </h1>
+
+    <section class="overzichtspagina"style="background-image: url('https://maken.wikiwijs.nl/bestanden/524465/vraag3.png');">
+
+      <!-- Hier komen de members -->
+      <% squad.members.forEach(member=> { %>
+
+        <article>
+          <div class="context">
+            <% if (member.avatar) { %>
+
+              <img class="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+              <% }else{ %>
+                <img class="avatar" src="/placeholder.jpg" alt="Placeholder avatar" />
+                <% } %>
+                  <h2>
+                    <%= member.name %>
+                      <%= member.prefix %>
+                        <%= member.surname %>
+                  </h2>
+          </div>
+        </article>
+
+        <% }) %>
+
+    </section>
+
+  </main>
 
   <%- include('./partials/foot') %>
