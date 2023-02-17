@@ -1,6 +1,6 @@
 .avatar{
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 .overzichtspagina{
@@ -8,6 +8,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 800px;
+  height: 700px;
+  margin: auto;
 }
 
 .context{
@@ -15,5 +18,10 @@
 }
 
 .context > h2{
-  font-size: medium;
+  font-size: small;
+}
+
+.titel{
+  text-align: center;
+  margin-bottom: 50px;
 }
