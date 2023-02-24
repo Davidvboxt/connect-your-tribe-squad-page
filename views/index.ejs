@@ -11,26 +11,53 @@
       <!-- Hier komen de members -->
       <% squad.members.forEach(member=> { %>
 
-        <article>
-          <div class="context">
-            <% if (member.avatar) { %>
+        <% function lengte(min, max) { return Math.random() * (150 - 220) + 100 ;} %>
 
-              <img class="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-              <% }else{ %>
-                <img class="avatar" src="/placeholder.jpg" alt="Placeholder avatar" />
-                <% } %>
-                  <h2>
+          <article class="jou-lengte" style="padding-top: <%= lengte() %>px">
+
+            <div class="liniaal"></div>
+
+            <ul>
+              <li>200cm -</li>
+              <li>190cm -</li>
+              <li>180cm -</li>
+              <li>170cm -</li>
+              <li>160cm -</li>
+              <li>150cm -</li>
+            </ul>
+            
+            <div class="context">
+              <% if (member.avatar) { %>
+                <img class="avatar" id="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+                <% }else{ %>
+                  <img class="avatar" src="/placeholder.jpg" alt="Placeholder avatar" />
+                  <% } %>
+                    <!-- <h2>
                     <%= member.name %>
                       <%= member.prefix %>
                         <%= member.surname %>
-                  </h2>
-          </div>
-        </article>
+                  </h2> -->
+            </div>
+          </article>
 
-        <% }) %>
+          <% }) %>
 
     </section>
 
   </main>
 
   <%- include('./partials/foot') %>
+
+    <script>
+
+      const hoi = 5;
+
+      const doei = 6;
+
+
+
+      // let artical = document.querySelector('article').style.height;
+
+      // const groot = '160px';
+
+    </script>

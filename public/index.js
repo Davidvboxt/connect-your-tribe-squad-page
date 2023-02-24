@@ -1,15 +1,6 @@
-// Animatie html
-document.addEventListener('DOMContentLoaded', function(event) {
+let memberlength = document.querySelector('.jou-lengte')
+let liniaal = document.querySelector('.liniaal')
 
-    document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
-    document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
-  
-    document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
-    document.getElementById('flip-card').classList.toggle('do-flip');
-    };
-  
-    document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
-    document.getElementById('flip-card').classList.toggle('do-flip');
-    };
-  
-  });
+if (memberleght.style.height > '100px') {
+  liniaal.innerHTML = "<ul><li>185cm -</li></ul>"
+}
