@@ -9,7 +9,11 @@
     <section class="overzichtspagina">
 
       <!-- Hier komen de members -->
+      <% slet memberlength = document.querySelector('.jou-lengte') %>
       <% squad.members.forEach(member=> { %>
+      <% if(memberlength.style.paddingTop > 100){ console.log(memberlength) } %>
+
+
 
         <% function lengte(min, max) { return Math.random() * (150 - 220) + 100 ;} %>
 
@@ -25,7 +29,7 @@
               <li>160cm -</li>
               <li>150cm -</li>
             </ul>
-            
+
             <div class="context">
               <% if (member.avatar) { %>
                 <img class="avatar" id="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
@@ -47,17 +51,3 @@
   </main>
 
   <%- include('./partials/foot') %>
-
-    <script>
-
-      const hoi = 5;
-
-      const doei = 6;
-
-
-
-      // let artical = document.querySelector('article').style.height;
-
-      // const groot = '160px';
-
-    </script>
