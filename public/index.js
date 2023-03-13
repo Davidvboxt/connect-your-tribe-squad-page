@@ -1,3 +1,4 @@
+// Geeft padding per klasgenoot aan de hand van hun lengte
 let memberlength = document.querySelector('.jou-lengte')
 let liniaal = document.querySelector('.liniaal')
 

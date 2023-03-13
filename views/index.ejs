@@ -8,43 +8,35 @@
 
     <section class="overzichtspagina">
 
-      <!-- Hier komen de members -->
-      <% slet memberlength = document.querySelector('.jou-lengte') %>
+      <!-- Loopt door alle klasgenoten uit de database -->
       <% squad.members.forEach(member=> { %>
-      <% if(memberlength.style.paddingTop > 100){ console.log(memberlength) } %>
 
 
+        <article class="jou-lengte">
 
-        <% function lengte(min, max) { return Math.random() * (150 - 220) + 100 ;} %>
+          <div class="liniaal"></div>
 
-          <article class="jou-lengte" style="padding-top: <%= lengte() %>px">
+          <ul>
+            <li>200cm -</li>
+            <li>190cm -</li>
+            <li>180cm -</li>
+            <li>170cm -</li>
+            <li>160cm -</li>
+            <li>150cm -</li>
+          </ul>
 
-            <div class="liniaal"></div>
+          <div class="context">
+            <!-- Loopt door al de avatars van de klasgenoten uit de database -->
+            <% if (member.avatar) { %>
+              <img class="avatar" id="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+              <% }else{ %>
+                <img class="avatar" src="/placeholder.jpg" alt="Placeholder avatar" />
+                <% } %>
 
-            <ul>
-              <li>200cm -</li>
-              <li>190cm -</li>
-              <li>180cm -</li>
-              <li>170cm -</li>
-              <li>160cm -</li>
-              <li>150cm -</li>
-            </ul>
+          </div>
+        </article>
 
-            <div class="context">
-              <% if (member.avatar) { %>
-                <img class="avatar" id="avatar" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
-                <% }else{ %>
-                  <img class="avatar" src="/placeholder.jpg" alt="Placeholder avatar" />
-                  <% } %>
-                    <!-- <h2>
-                    <%= member.name %>
-                      <%= member.prefix %>
-                        <%= member.surname %>
-                  </h2> -->
-            </div>
-          </article>
-
-          <% }) %>
+        <% }) %>
 
     </section>
 

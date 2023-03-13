@@ -1,3 +1,4 @@
+// Importeer express uit de node_modules map
 import express from 'express'
 
 const url = 'https://whois.fdnd.nl/api/v1/squad/squad-b-2022'
@@ -21,10 +22,6 @@ app.get('/', (request, response) => {
 
   response.render('index', data)
 })
-
-// app.get('/members', (request, response) => {
-//   response.send('Joepie!!')
-// })
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
