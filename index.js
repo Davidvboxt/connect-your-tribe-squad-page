@@ -1,6 +1,7 @@
 // Importeer express uit de node_modules map
 import express from 'express'
 
+// Verteld waar het de data uit moet halen
 const url = 'https://whois.fdnd.nl/api/v1/squad/squad-b-2022'
 const data = await fetch(url)
   .then((response) => response.json())
